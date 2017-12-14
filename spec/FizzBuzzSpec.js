@@ -10,6 +10,9 @@ describe('fizzbuzz', function(){
       expect(javabuzz.isDivisableByThree(3)).toBe(true);
     });
 
+    it('by five', function() {
+      expect(javabuzz.isDivisableByFive(5)).toBe(true);
+    });
 
   });
 
@@ -18,5 +21,7 @@ describe('fizzbuzz', function(){
       expect(javabuzz.isDivisableByThree(1)).toBe(false);
     });
   });
+
+
 
 });
