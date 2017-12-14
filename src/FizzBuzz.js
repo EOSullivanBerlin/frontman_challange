@@ -1,5 +1,5 @@
 var JavaBuzz = function(){}
 
-JavaBuzz.prototype.isDivisableByThree = function(number) {
-  return (number % 3 == 0)
+JavaBuzz.prototype.isDivisableByThreeOrFive = function(number, divisor) {
+  return (number % divisor == 0)
 };
