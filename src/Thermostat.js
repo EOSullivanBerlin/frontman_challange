@@ -1,7 +1,14 @@
 'uses strict'
 
-var Thermostat = function(){};
+var Thermostat = function(){
+  this._temperture = 20;
+};
 
-Thermostat.prototype.temperture = function() {
-  return 20;
+
+Thermostat.prototype.CurrentTemperture = function() {
+  return this._temperture;
+};
+
+Thermostat.prototype.up = function() {
+  this._temperture += 1;
 };

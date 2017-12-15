@@ -8,7 +8,14 @@ describe('Thermostat', function() {
   });
 
   it('starts at 20 degrees', function() {
-    expect(thermostat.temperture()).toEqual(20);
+    expect(thermostat.CurrentTemperture()).toEqual(20);
+  });
+
+  describe('increase', function() {
+    it('', function() {
+      thermostat.up();
+      expect(thermostat.CurrentTemperture()).toEqual(21);
+    });
   });
 
 });
