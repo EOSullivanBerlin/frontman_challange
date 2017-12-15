@@ -48,11 +48,7 @@ describe('fizzbuzz', function(){
     });
 
     it('returns the number if its not divisable by 3 or 5', function() {
-      expect(javabuzz.says(2)).toEqual(2) 
+      expect(javabuzz.says(2)).toEqual(2)
     });
   });
-
-
-
-
 });
