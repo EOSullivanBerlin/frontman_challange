@@ -42,6 +42,14 @@ describe('fizzbuzz', function(){
     it('when 5, Buzz', function() {
       expect(javabuzz.says(5)).toEqual("Buzz")
     });
+
+    it('when 15, JavaBuzz', function() {
+      expect(javabuzz.says(15)).toEqual("JavaBuzz")
+    });
+
+    it('returns the number if its not divisable by 3 or 5', function() {
+      expect(javabuzz.says(2)).toEqual(2) 
+    });
   });
 
 
