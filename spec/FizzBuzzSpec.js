@@ -34,6 +34,16 @@ describe('fizzbuzz', function(){
     });
   });
 
+  describe('says', function() {
+    it('when 3, Java', function() {
+      expect(javabuzz.says(3)).toEqual("Java")
+    });
+
+    it('when 5, Buzz', function() {
+      expect(javabuzz.says(5)).toEqual("Buzz")
+    });
+  });
+
 
 
 

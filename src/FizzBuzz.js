@@ -7,3 +7,7 @@ JavaBuzz.prototype._isDivisableBy = function(number, divisor) {
 JavaBuzz.prototype.isDivisableByFifteen = function(number) {
   return this._isDivisableBy(number, 15)
 };
+
+JavaBuzz.prototype.says = function () {
+  return "Java"
+};
