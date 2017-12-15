@@ -22,6 +22,21 @@ describe('Thermostat', function() {
     expect(thermostat.isPowerSavingModeOn()).toBe(true);
   });
 
+  describe('Power saving mode can be switched off', function() {
+    it('Switch off power saving mode', function() {
+      thermostat.switchOffPowerSavingMode()
+      expect(thermostat.isPowerSavingModeOn()).toEqual(false);
+    });
+  });
+
+  describe('Power saving mode can be switched on', function() {
+    it('Switch on power saving mode', function() {
+      thermostat.switchOffPowerSavingMode()
+      thermostat.switchOnPowerSavingMode()
+      expect(thermostat.isPowerSavingModeOn()).toEqual(true);
+    });
+  });
+
   describe('increase', function() {
     it('the temp goes up by one when up is called', function() {
       thermostat.up();
