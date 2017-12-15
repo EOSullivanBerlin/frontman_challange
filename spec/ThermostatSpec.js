@@ -12,9 +12,16 @@ describe('Thermostat', function() {
   });
 
   describe('increase', function() {
-    it('', function() {
+    it('the temp goes up by one when up is called', function() {
       thermostat.up();
       expect(thermostat.CurrentTemperture()).toEqual(21);
+    });
+  });
+
+  describe('decrease', function() {
+    it('the temp goes down by one when down is called', function() {
+      thermostat.down();
+      expect(thermostat.CurrentTemperture()).toEqual(19);
     });
   });
 
