@@ -49,3 +49,7 @@ Thermostat.prototype.switchOffPowerSavingMode = function() {
 Thermostat.prototype.switchOnPowerSavingMode = function() {
   this._powerSavingMode = true;
 };
+
+Thermostat.prototype.reset = function() {
+  this._temperture = 20;
+};

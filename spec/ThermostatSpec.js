@@ -22,6 +22,14 @@ describe('Thermostat', function() {
     expect(thermostat.isPowerSavingModeOn()).toBe(true);
   });
 
+  it('can reset the default temperture', function() {
+    for (var i = 0; i < 6; i += 1) {
+      thermostat.up()
+    }
+    thermostat.reset()
+    expect(thermostat.CurrentTemperture()).toEqual(20);
+  });
+
   describe('Power saving mode can be switched off', function() {
     it('Switch off power saving mode', function() {
       thermostat.switchOffPowerSavingMode()
