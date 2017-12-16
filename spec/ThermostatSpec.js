@@ -23,11 +23,38 @@ describe('Thermostat', function() {
   });
 
   it('can reset the default temperture', function() {
-    for (var i = 0; i < 6; i += 1) {
-      thermostat.up()
+    for (var i = 0; i < 6; i ++) {
+      thermostat.up();
     }
     thermostat.reset()
     expect(thermostat.CurrentTemperture()).toEqual(20);
+  });
+
+  describe('displaying usage levels', function() {
+    describe('when the temperture is below 18 degrees', function() {
+      it('it is considered low usage', function() {
+        for (var i = 0; i < 3; i ++) {
+          thermostat.down();
+        }
+        expect(thermostat.energyUsage()).toEqual('low-usage')
+      });
+    });
+  });
+
+  describe('when the temperture is between 18 and 25', function() {
+    it('is considered medium usage', function() {
+      expect(thermostat.energyUsage()).toEqual('medium-usage')
+    });
+  });
+
+  describe('when the temp is anything else', function() {
+    it('it is considered high usage', function() {
+      thermostat._powerSavingMode = false;
+      for (var i = 0; i < 6; i ++) {
+        thermostat.up();
+      }
+      expect(thermostat.energyUsage()).toEqual('high-usage')
+    });
   });
 
   describe('Power saving mode can be switched off', function() {

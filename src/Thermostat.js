@@ -5,6 +5,7 @@ var Thermostat = function(){
   this.POWER_SAVING_ON_MAX_TEMP = 25;
   this.POWER_SAVING_OFF_MAX_TEMP = 32;
   this.DEFAULT_TEMPERTURE = 20;
+  this.MEDIUM_ENERGY_USAGE_LIMIT  = 18;
   this._temperture = this.DEFAULT_TEMPERTURE;
   this._powerSavingMode = true;
 };
@@ -54,3 +55,12 @@ Thermostat.prototype.switchOnPowerSavingMode = function() {
 Thermostat.prototype.reset = function() {
   this._temperture = this.DEFAULT_TEMPERTURE;
 };
+
+Thermostat.prototype.energyUsage = function() {
+  if (this._temperture < this.MEDIUM_ENERGY_USAGE_LIMIT ) {
+    return 'low-usage';
+  } else if (this._temperture >= this.MEDIUM_ENERGY_USAGE_LIMIT && this._temperture <= this.POWER_SAVING_ON_MAX_TEMP) {
+    return 'medium-usage';
+  }
+  return 'high-usage';
+}
