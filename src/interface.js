@@ -14,6 +14,7 @@ $(document).ready(function() {
 
   function updateTemp() {
     $('#temperature').text(thermostat._temperture);
+    $('#temperature').attr('class', thermostat.energyUsage());
   };
 
   $('#temperature-reset').click(function() {
