@@ -9,30 +9,37 @@
     <section class="container">
       <section>
         <h1 id="temperature"></h1>
-        
+
         <div class="buttons">
           <p>
             <button id="temperature-up">+</button>
             <button id="temperature-down">-</button>
+          </p>
+          <p>
             <button id="temperature-reset">reset</button>
-
+          </p>
+          <p>
             <select id="current-city">
               <option value="london">London</option>
               <option value="berlin">Berlin</option>
               <option value="tokyo">Tokyo</option>
+
             </select>
           </p>
         </div>
 
         <div class ="powersavingmode">
-        power saving mode is <span id="power-savng-status">on</span>
-        <button id="power-saving-on">PSM on</button>
-        <button id="power-saving-off">PSM off</button>
+        <p>
+          <button id="power-saving-on">PSM on</button>
+          <button id="power-saving-off">PSM off</button>
+        </p>
+        <h1> Power saving mode is <span id="power-savng-status">on</span> </h1>
         </div>
+        <section>
+          <h1>Temperature outside: <span id="current-temperature">20</span></h1>
+        </section>
       </section>
-      <section>
-        <h1>Current temperature: <span id="current-temperature">20</span></h1>
-      </section>
+
     </section>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="src/Thermostat.js"></script>
