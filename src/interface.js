@@ -33,4 +33,13 @@ $(document).ready(function() {
     $('#power-savng-status').text('off')
     updateTemp()
   })
+
+  
+
+  $('#current-city').change(function() {
+    var city = $('#current-city').val();
+    $.get('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=6e45629d750c096cb392dfcb90f33c03&units=metric', function(data) {
+      $('#current-temperature').text(data.main.temp)
+    })
+  })
 })
